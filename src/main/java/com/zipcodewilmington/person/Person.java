@@ -9,6 +9,8 @@ public class Person {
     private int height;
     private String lastName;
     private boolean hasBrain;
+    private boolean leftHanded;
+    private boolean hasPet;
 
 
 
@@ -74,5 +76,21 @@ public class Person {
 
     public void setHasBrain(boolean hasBrain) {
         this.hasBrain = hasBrain;
+    }
+
+    public boolean isHasPet() {
+        return hasPet;
+    }
+
+    public void setHasPet(boolean hasPet) {
+        this.hasPet = hasPet;
+    }
+
+    public boolean isLeftHanded() {
+        return leftHanded;
+    }
+
+    public void setLeftHanded(boolean leftHanded) {
+        this.leftHanded = leftHanded;
     }
 }

@@ -143,4 +143,34 @@ public class TestPerson {
         boolean actual = person.isHasBrain();
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void testHasPets() {
+        // Given
+        Person person = new Person();
+        Boolean expected = true;
+
+        // When
+        person.setHasPet(expected);
+
+
+        // Then
+        boolean actual = person.isHasPet();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testLeftHandedOrNot() {
+        // Given
+        Person person = new Person();
+        Boolean expected = true;
+
+        // When
+        person.setLeftHanded(expected);
+
+
+        // Then
+        boolean actual = person.isLeftHanded();
+        Assert.assertEquals(expected, actual);
+    }
 }
