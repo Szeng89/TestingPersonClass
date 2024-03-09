@@ -37,6 +37,7 @@ public class TestPerson {
         Assert.assertEquals(expected, actual);
     }
 
+
     @Test
     public void testConstructorWithAge() {
         // Given
@@ -52,20 +53,23 @@ public class TestPerson {
 
 
     @Test
-    public void testConstructorWithNameAndAge() {
+    public void testConstructorWithEverything() {
         // Given
         Integer expectedAge = 5;
         String expectedName = "Leon";
+        Integer expectedHeight = 5;
 
         // When
-        Person person = new Person(expectedName, expectedAge);
+        Person person = new Person(expectedName, expectedAge, expectedHeight);
 
         // Then
         Integer actualAge = person.getAge();
         String actualName = person.getName();
+        Integer actualHeight = person.getHeight();
 
         Assert.assertEquals(expectedAge, actualAge);
         Assert.assertEquals(expectedName, actualName);
+        Assert.assertEquals(expectedHeight, actualHeight);
     }
 
     @Test
@@ -93,6 +97,50 @@ public class TestPerson {
 
         // Then
         Integer actual = person.getAge();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetHeight() {
+        // Given
+        Person person = new Person();
+        Integer expected = 5;
+
+        // When
+        person.setHeight(expected);
+
+        // Then
+        Integer actual = person.getHeight();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetLastName() {
+        // Given
+        Person person = new Person();
+        String expected = "zeng";
+
+        // When
+        person.setLastName(expected);
+
+
+        // Then
+        String actual = person.getLastName();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testHasBrain() {
+        // Given
+        Person person = new Person();
+        Boolean expected = true;
+
+        // When
+        person.setHasBrain(expected);
+
+
+        // Then
+        boolean actual = person.isHasBrain();
         Assert.assertEquals(expected, actual);
     }
 }
